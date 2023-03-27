@@ -12,5 +12,5 @@ class Home(models.Model):
     bathroom = models.IntegerField()
     description = models.TextField()
     squareFeet = models.IntegerField()
-    image = models.ImageField()
+    image = models.TextField()
     
