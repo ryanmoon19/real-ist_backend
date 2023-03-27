@@ -13,4 +13,4 @@ class Home(models.Model):
     description = models.TextField()
     squareFeet = models.IntegerField()
     image = models.TextField()
-    
+    created_at = models.DateTimeField(auto_now_add=True)

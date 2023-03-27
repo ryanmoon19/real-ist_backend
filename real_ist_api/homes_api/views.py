@@ -5,6 +5,10 @@ from .models import Home
 
 # Create your views here.
 class HomeList(generics.ListCreateAPIView):
+    queryset = Home.objects.all().order_by('-created_at')[:4]
+    serializer_class = HomeSerializer
+
+class AllHomesList(generics.ListCreateAPIView):
     queryset = Home.objects.all().order_by('id')
     serializer_class = HomeSerializer
 
